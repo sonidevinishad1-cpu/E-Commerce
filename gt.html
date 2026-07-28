@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .footer {
+  width: 100%;
+  background-color: rgb(31, 30, 30);
+  color: white;
+  padding: 40px 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-col {
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+.name {
+  font-size: 28px;
+  letter-spacing: 4px;
+  margin-bottom: 5px;
+}
+
+.creator {
+  font-size: 13px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.open {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.social a {
+  display: block;
+  color: white;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.social i {
+  margin-right: 8px;
+}
+
+.disclaimer {
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.footer-col h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-col span {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* ✅ Mobile View */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer-col {
+    width: 100%;
+  }
+}
+    </style>
+</head>
+<body>
+    <footer>
+  <div class="footer">
+
+    <div class="footer-col brand">
+      <p class="name">THE CARTIFY</p>
+      <span class="creator">by Vipin</span>
+
+      <p class="open">
+        Opening time: 11 AM - 9:30 PM <br><br>
+        Restaurant timing: 11 AM - 11 PM<br><br>
+        Phone number: +9999999999
+      </p>
+
+      <div class="social">
+        <a href="#"><i class="fa-brands fa-instagram"></i> CARTIFY</a>
+        <a href="#"><i class="fa-solid fa-location-dot"></i> Get Location</a>
+      </div>
+
+      <p class="disclaimer">
+        We do not advertise job openings or business opportunities...
+        <br><br>© 2025 LakeShore | Capital Mall
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Explore</h3>
+      <span>Shop</span>
+      <span>Dine</span>
+      <span>Experiences</span>
+      <span>Services</span>
+    </div>
+
+    <div class="footer-col">
+      <h3>Company</h3>
+      <span>About us</span>
+      <span>Events</span>
+      <span>Floor Maps</span>
+      <span>Contact us</span>
+    </div>
+
+    <div class="footer-col">
+      <h3>Legal</h3>
+      <span>Privacy Policy</span>
+      <span>Terms & Conditions</span>
+      <span>Other Information</span>
+      <span>History</span>
+    </div>
+
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        body
+        {
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background-color:green;
+        }
+        .main
+        {
+            width:400px;
+            height:520px;
+            margin-top:40px;
+            border-radius:10px;
+            background:rgba(255, 255, 255, 0.15);
+            backdrop-filter:blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow:0px 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        h1
+        {
+            color:black;
+            margin-left:150px;
+        }
+        label
+        {
+            margin-left:40px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #pass,
+#confirm {
+    height: 25px;
+    width: 305px;
+    margin-left: 40px;
+    outline: none;
+    border-radius: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: white;
+}
+        input[type="email"]
+        {
+            height:25px;
+            width:305px;
+            margin-left:40px;
+            outline:none;
+            border-radius:2px;
+            border:1px solid rgba(255, 255, 255, 0.3);;
+            background-color:white;
+        }
+        input[type="password"]
+        {
+            height:25px;
+            width:305px;
+            margin-left:40px;
+            outline:none;
+            border-radius:2px;
+            border:1px solid rgba(255, 255, 255, 0.3);;
+            background-color:white;
+        }
+        input[type="submit"]
+        {
+            height:40px;
+            width:310px;
+            margin-left:40px;
+            border-radius:5px;
+            cursor:pointer;
+            position: absolute;
+            background-color:rgb(82, 82, 245);
+            border:1px solid rgb(82, 82, 245);
+        }
+        input[type="submit"]:hover
+        {
+            background-color:rgb(101, 101, 247);
+
+        }
+        .google
+        {
+            width:310px;
+            height:40px;
+            cursor:pointer;
+            margin-left:40px;
+            margin-top:10px;
+            border-radius:5px;
+            border:1px solid  rgba(255, 255, 255, 0.3);
+            position: relative;
+            background-color:white;
+        }
+        .google:hover
+        {
+            background-color:rgb(243, 242, 242);
+        }
+        .facebook
+        {
+            width:310px;
+            height:40px;
+            cursor:pointer;
+            margin-left:40px;
+            border-radius:5px;
+            background-color:#145DBF;
+            border:1px solid #145DBF;
+            position: relative;    
+        }
+        .facebook:hover
+        {
+            background-color:#0F4C9C;
+        }
+        
+        
+        .already
+        {
+            position:absolute;
+            margin-top:-50px;
+            margin-left:100px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        a
+        {
+            text-decoration:none;
+        }
+        .line1
+        {
+            position: absolute;
+            margin-top:-19px;
+            margin-left:205px
+        }
+        .line2
+        {
+            top:-19px;
+            left:38px;
+            position: relative;
+        }
+        .or
+        {
+            position: absolute;
+            margin-left:185px;
+            margin-top:-12px;
+        }
+        #it
+        {
+            position: absolute;
+            font-size:25px;
+            left:360px;
+            top:227px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <img src="nature.jpeg" alt="" style="position:absolute; width:100%; height:109.7vh;">
+    <div class="main">
+        <h1>Sign in</h1>
+        <form onsubmit="return checkpass()">
+            <label for="">Email</label><br>
+            <input type="email" placeholder="Email" id="email" required><br><br>
+            <label>Password</label><br>
+            <input type="password" placeholder="Password" id="pass"  required><br><br>
+            <label>Confirm Password</label>
+            <input type="password" placeholder="Password" id="confirm" required>
+            <span id="it" onclick="see()">👁</span><br><br>
+            <input type="submit" value="Sign in" onclick="return checkpass()"><br><br><br><br><br><br>
+            <div class="forget">
+            <span class="already">Don't have an account?<a href="login.html">Login</a></span>
+            </div>
+            <span class="line1">__________________</span><span class="or">Or</span>
+            <span class="line2">__________________</span>
+            <button class="facebook" onclick="alert('Feature is not available')">Continue with facebook</button>
+            <button class="google" onclick="alert('Feature is not available')">Continue with Google</button>
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    function checkpass()
+    {
+    let check = document.getElementById("pass");
+    let bisecp = document.getElementById("confirm");
+    let triscep = document.getElementById("email");
+    let valid = true
+        check.style.border = "";
+        bisecp.style.border = "";
+        triscep.style.border="";
+    if(triscep.value.trim()==="")
+    {
+        triscep.style.border="1px solid red";
+        alert("Fill the Email ID")
+        valid= false;
+    }
+    if(check.value.trim()==="")
+    {
+    check.style.border="1px solid red";
+    alert("Enter the password")
+    valid= false;
+    }
+    if(bisecp.value.trim()==="")
+    {
+    bisecp.style.border="1px solid red";
+    alert("Enter the confirm password")
+    valid= false;
+    }
+    
+    if (check.value !== bisecp.value) {
+    check.style.border = "1px solid red";
+    bisecp.style.border = "1px solid red";
+    alert("Password and confirm password doesn't match")
+    valid = false;
+    }
+    if(valid)
+    {
+        check.style.border="1px solid green"
+        bisecp.style.border="1px solid green"
+        triscep.style.border="1px solid green"
+    }
+    return valid;
+    }
+    function see()
+    {
+        let password = document.getElementById("pass");
+        let confirm = document.getElementById("confirm");
+        let eye = document.getElementById("it");
+        if(password.type==="password")
+    {
+        password.type="text";
+        confirm.type="text";
+        eye.textContent="🙈"
+    }
+    else
+    {
+        password.type="password"
+        confirm.type="password"
+        eye.textContent="👁"
+    }
+    }
+</script>

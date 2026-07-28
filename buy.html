@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Buy Page</title>
+<style>
+body { font-family: Arial; }
+.item {
+    border:1px solid black;
+    padding:10px;
+    margin:10px;
+}
+button {
+    padding:10px;
+    border:none;
+    border-radius:5px;
+    background-color: green;
+    color:white;
+    cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<h1>Checkout 🧾</h1>
+<div id="buy-items"></div>
+
+<h2 id="total"></h2>
+
+<button onclick="placeOrder()">Place Order</button>
+
+<script>
+function loadBuyPage() {
+    let data = JSON.parse(localStorage.getItem("buyProduct"));
+    let container = document.getElementById("buy-items");
+    let total = 0;
+
+    container.innerHTML = "";
+
+    if (!data) {
+        container.innerHTML = "<h2>No product selected</h2>";
+        return;
+    }
+
+    // If single product
+    if (!Array.isArray(data)) {
+        data = [data];
+    }
+
+    data.forEach(item => {
+        total += item.productPrice;
+
+        container.innerHTML += `
+        <div class="item">
+            <img src="${item.productImage}" width="100">
+            <h3>${item.productName}</h3>
+            <p>Price: $${item.productPrice}</p>
+        </div>
+        `;
+    });
+
+    document.getElementById("total").innerText = "Total: $" + total;
+}
+
+function placeOrder() {
+    alert("Order placed successfully ✅");
+
+    // clear cart after order
+    localStorage.removeItem("cart");
+    localStorage.removeItem("buyProduct");
+
+    window.location.href = "detail.html";
+}
+window.onload = loadBuyPage;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin:0px;
+            background-color:black;
+            box-sizing:border-box;
+        }
+        .list
+        {
+            width:100%;
+            height:40px;
+            border-bottom:1px solid grey;
+            border-top:1px solid grey;
+            /* display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding:0 400px; */
+            display: flex;
+            justify-content:space-around;
+            align-items: center;
+        }
+        p
+        {
+            font-size:1.6rem;
+            margin-left:120px;
+            margin-top:20px;
+            color:white;
+            letter-spacing:3px;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .id
+        {
+            color:grey;
+            margin-top:5px;
+            font-size:0.9rem;
+            letter-spacing:0px;
+        }
+        span
+        {
+            color:grey;
+            font-size:1.5rem;
+            cursor: pointer;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+        .menu_follower
+        {
+            width:200px;
+            height:40vh;
+            display:none;
+            background-color:grey;
+            margin-top:310px;
+            margin-left:-42%;
+            position: absolute;
+            z-index:1;
+            border-radius:5px;
+        }
+        .menu
+        {
+            height:30px;
+            background-color:grey;
+            cursor:pointer;
+            font-size:16px;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            letter-spacing:0px;
+            margin-left:0px;
+            padding:5px;
+        }
+        .menu:hover
+        {
+            transition:all ease 0.1s;
+            background-color:red;
+        }
+        img
+        {
+            width:70px;
+            left:25px;
+            top:15px;
+            position:absolute;
+
+        }
+        </style>
+</head>
+<body>
+    <div class="main">
+        <img src="user-removebg-preview.png" alt="Error">
+        <p>Vipin Nishad</p>
+        <p class="id">@vipin_nishad</p><br>
+        <div class="list">
+            <span id="follow" onclick="follower()">follow</span>
+            <div class="menu_follower" id="men">
+                <p class="menu">Add to Close Friend list</p>
+                <p class="menu">Add to favourites</p>
+                <p class="menu">Mute</p>
+                <p class="menu">Restrict</p>
+                <p class="menu" onclick="unfollow()" id="unfollow">Unfollow</p>
+            </div>
+            <span onclick="followinglist()">Message</span>
+        </div>
+        <!-- <p id="rat">vipin_nishad</p>
+        <p id="rat">karan</p> -->
+    </div>
+</body>
+</html>
+<script>
+    function follower()
+    {
+        let flow = document.getElementById('follow');
+        let menu = document.getElementById('men');
+        if(flow.innerHTML=="follow")
+    {
+        flow.innerHTML="following ";
+    }
+    
+        if(menu.style.display=='none')
+    {
+        menu.style.display='block'
+    }
+        else
+    {
+        menu.style.display='none';
+    }
+    }
+    function unfollow()   //unfollow
+    {
+        let result = confirm("Do you want to unfollow");
+        let flow = document.getElementById('follow');
+        let menu= document.getElementById('men');
+        let unfollow = document.getElementById('unfollow');
+        if(result)
+    {
+        flow.innerHTML="follow";
+    }
+        if(flow.innerHTML=='follow');
+    {
+        menu.style.display='none';
+    }
+
+    }
+</script>

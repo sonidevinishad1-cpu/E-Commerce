@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin:0px;
+            padding:0px;
+        }
+        nav
+        {
+            width:100%;
+            height:100px;
+            margin-left:-40px;
+            margin-top:20px;
+            padding:0px;
+            z-index:0;
+        }
+        ol
+        {
+            margin-left:520px;
+            line-height:100px;
+        }
+        ol li
+        {
+            display:inline;
+        }
+        ol li a
+        {
+            padding:15px; 
+        }
+        a
+        {
+            text-decoration:None;
+            color:black;
+            font-size:15px;
+            font-family:Century Gothic;
+        }
+         .search
+        {
+            margin-left:1100px;
+            margin-top:45px;
+            color:black;
+            width:100px;
+            z-index:1;
+            position:absolute;
+
+        }
+         .T2
+        {
+           font-size:28px;
+            word-spacing:16px;
+            letter-spacing:5px;
+            margin-top:30px; 
+            margin-left:100px;
+            color:black;
+            font-family:Century Gothic;
+            position: absolute;
+        }
+        .L2
+        {
+            margin-left:270px;
+            margin-top:60px;
+            font-size:8px;
+            color:black;
+            font-family:Century Gothic;
+            position: absolute;
+        }
+         .f1
+        {
+            color:black;
+            margin-left:1120px;
+            margin-top:41px;
+            font-size:16px;
+            z-index:1;
+            position: absolute;
+        }
+        .text
+        {
+            margin-top:20px;
+            font-size:50px;
+            color:black;
+            font-family:Century Gothic;
+        }
+        .textborder
+        {
+            width:100px;
+            height:100px;
+            margin-top:10px;
+            margin-left:590px;
+        }
+        .textborder2
+        {
+            margin-top:30px;
+            margin-left:400px;
+        }
+        .how
+        {
+            width:630px;
+            height:60px;
+            margin-left:-80px;
+            border:1px solid;
+            border-radius:10px;
+            color:grey;
+        }
+        .how1
+        {
+            color:black;
+            margin-top:20px;
+            margin-left:10px;
+        }
+        input[type="text"]
+        {
+            width:590px;
+            height:59px;
+            margin-left:40px;
+            border:none;
+            outline:none;
+            border-top-right-radius:10px;
+            border-bottom-right-radius:10px;
+        }
+        .input
+        {
+        margin-top:-37px;
+        }
+        .search1
+        {
+            width:160px;
+            height:58px;
+            margin-top:-60px;
+            margin-left:570px;
+            border-radius:10px;
+            border:1px solid;
+        }
+        .text2
+        {
+            margin-left:50px;
+            margin-top:17px;
+            font-size:15px;
+            color:black;
+            position: absolute;
+            font-family:Century Gothic;
+        }
+        .search1:hover
+        {
+            background-color:rgb(22, 22, 22);
+            cursor: pointer;
+
+            .text2
+            {
+                color:white;
+            }
+        }
+       footer
+            {
+                height:70vh;
+                margin-top:30px;
+            }
+            .footer
+            {
+                height:85vh;
+                border:0px solid;
+                padding:5px 0px;
+                background-color:rgb(31, 30, 30);
+            }
+            p{
+                color:white;
+                margin-left:100px; 
+            }
+            span
+            {
+                color:white;
+                font-size:18px;
+                margin-top:75px;
+                position:absolute;
+            }
+            .name
+            {
+                font-size:30px;
+                word-spacing:20px;
+                letter-spacing:5px;
+                margin-top:50px;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            .creator
+            {
+                margin-top:5px;
+                margin-left:305px;
+                font-size:13px;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            .open
+            {
+                margin-top:60px;
+                font-size:15px;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            .insta
+            {
+                position:absolute;
+                margin-top:30px;
+                margin-left:100px;
+                font-size:20px;
+                color:white;
+            }
+            .location
+            {
+                position:absolute;
+                margin-top:27px;
+                margin-left:210px;
+                font-size:18px;
+                color:white;
+            }
+            .capital
+            {
+                color:white;
+                margin-left:130px;
+                margin-top:30px;
+                position:absolute;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            .gl
+            {
+                color:white;
+                margin-left:235px;
+                margin-top:30px;
+                position: absolute; 
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            .disclaimer
+            {
+                margin-top:90px;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            .s1
+            {
+                margin-top:-320px;
+                margin-left:600px;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            .s2
+            {
+                margin-top:-540px;
+                margin-left:840px;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            .s3
+            {
+                margin-top:-110px;
+                margin-left:1090px;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            
+            #cart-count
+            {
+                margin-top:-60px;
+                margin-left:1260px;
+                position: absolute;
+            }
+            .marquee
+            {
+                width:100%; 
+                align-items:center;
+                justify-content:center;
+                background-color:white;
+                position: relative;
+                z-index:1;
+                overflow:hidden;
+              
+            }
+            .marquee img
+            {
+                flex-shrink:0;
+                
+            }
+            .slide
+            {
+                display:flex;
+                width:max-content;
+                animation-name:slide;
+                animation-iteration-count:infinite;
+                animation-timing-function:linear;
+                animation-duration:30s;
+            }
+           
+            .slide img
+            {
+                width:500px;
+                height:280px;
+                margin-right:20px;
+                
+            }
+            
+            .offer2
+            {
+                width:500px;
+                height:280px;
+            }
+            .three
+            {
+                display:none;
+            }
+            @keyframes slide
+            {
+                0%
+                {
+                    transform:translateX(0px);
+                }
+                100%
+                {
+                    transform:translateX(-50%);
+                }
+            }
+            @media(max-width:1280px)
+            {
+                .skmain
+                {
+                    display:none;
+                }
+                #skeleton
+                {
+                    display:none;
+                }
+                .search
+                {
+                    margin-left:-50px;
+                }
+                .log
+                {
+                    margin-left:1000px;
+                }
+                .sin
+                {
+                    margin-left:1100px;
+                }
+                .car
+                {
+                    margin-left:-50px;
+                }
+                .toogle
+                {
+                    overflow-x:auto;
+                }
+            }
+            @media (max-width: 1024px)
+            {
+            .main
+            {
+                grid-template-columns:repeat(2, 1fr);
+            }
+            .search
+            {
+                width:400px;
+                margin-left:-140px;
+            }
+            input[type="search"]
+            {
+                width:350px;
+            }
+            li
+            {
+                margin:10px;
+                line-height:70px;
+            }
+            .log
+            {
+                margin-left:740px;
+            }
+            .sin
+            {
+                margin-left:830px;
+            }
+            .car
+            {
+                margin-left:-330px;
+            }
+            .image
+            {
+                width:470px;
+            }
+            .toogle
+            {
+                overflow-x:auto;
+            }
+            p
+            {
+                color:white;
+                font-size:15px;
+                margin-left:20px;
+            }
+            .open
+            {
+                font-size:15px;
+            }
+            .creator
+            {
+                margin-left:220px;
+            }
+            .insta
+            {
+                margin-left:20px;
+            }
+            .capital
+            {
+                margin-left:50px;
+            }
+            .location{
+                margin-left:130px;
+            }
+            .gl
+            {
+                margin-left:155px;
+            }
+            .s1
+            {
+                font-size:15px;
+                margin-left:400px;
+            }
+            .s22
+            {
+                font-size:15px;
+            }
+            .s2
+            {
+                margin-left:550px;
+            }
+            .s33
+            {
+                font-size:15px;
+            }
+            .s3
+            {
+                margin-top:-111px;
+                margin-left:720px;
+            }
+            }
+            @media(max-width:912px)
+            {
+                .image
+                {
+                width:360px;
+                }
+                li
+                {
+                    margin:10px;
+                }
+                ol
+                {
+                    margin-left:-30px;
+                }
+                a
+                {
+                    font:8px;
+                }
+                .search
+                {
+                    width:300px;
+                    margin-left:-170px;
+                }
+                input[type="search"]
+                {
+                    width:260px;
+                }
+                .log
+                {
+                    position: absolute;
+                    left:-120px;
+                }
+                .sin
+                {
+                    position: absolute;
+                    left:-110px;
+                }
+                .car
+                {
+                    margin-left:-430px;
+                }
+                .image
+                {
+                    width:430px;
+                }
+                img
+                {
+                    width:400px;
+                }
+                .s1
+                {
+                    margin-left:350px;
+                }
+                .s2
+                {
+                    margin-left:500px;
+                }
+                .s3
+                {
+                    margin-left:630px;
+                    margin-top:-114px;
+                }
+            }
+            @media(max-width:853px)
+            {
+                .image
+                {
+                width:360px;
+                }
+                img
+                {
+                    width:300px;
+                }
+                li
+                {
+                    margin:5px;
+                }
+                ol
+                {
+                    margin-left:-30px;
+                }
+                a
+                {
+                    font:8px;
+                }
+                .search
+                {
+                    width:250px;
+                    margin-left:-210px;
+                }
+                input[type="search"]
+                {
+                    width:210px;
+                }
+                .log
+                {
+                    position: absolute;
+                    left:-210px;
+                }
+                .sin
+                {
+                    position: absolute;
+                    left:-210px;
+                }
+                .car
+                {
+                    margin-left:-540px;
+                }
+                .s1
+                {
+                    margin-left:350px;
+                }
+                .s2
+                {
+                    margin-left:500px;
+                }
+                .s3
+                {
+                    margin-left:630px;
+                    margin-top:-114px;
+                }
+            }
+            @media(max-width:768px)
+            {
+                .image
+                {
+                width:360px;
+                }
+                img
+                {
+                    width:300px;
+                }
+                li
+                {
+                    margin:5px;
+                }
+                ol
+                {
+                    margin-left:-30px;
+                }
+                a
+                {
+                    font:8px;
+                }
+                .search
+                {
+                    width:250px;
+                    margin-left:-210px;
+                }
+                input[type="search"]
+                {
+                    width:210px;
+                }
+                .log
+                {
+                    position: absolute;
+                    left:-210px;
+                }
+                .sin
+                {
+                    position: absolute;
+                    left:-210px;
+                }
+                .car
+                {
+                    margin-left:-540px;
+                }
+                .s1
+                {
+                    margin-left:350px;
+                }
+                .s2
+                {
+                    margin-left:500px;
+                }
+                .s3
+                {
+                    margin-left:630px;
+                    margin-top:-114px;
+                }
+            }
+            @media (max-width: 680px)
+            {
+            .main
+            {
+                grid-template-columns:1fr;
+            }
+            .search
+            {
+                width:200px;
+                margin-left:-250px;
+            }
+            input[type="search"]
+            {
+                width:150px;
+            }
+            ol
+            {
+                margin-left:-40px;
+            }
+            li
+            {
+                margin:3px;
+                line-height:70px;
+            }
+            .log
+            {
+                width:60px;
+                position: absolute;
+                left:-300px;
+            }
+            .sin
+            {
+                width:60px;
+                position:absolute;
+                left:-320px;
+            }
+            .car
+            {
+                margin-left:-670px;
+            }
+            .footer
+            {
+                height:120vh;
+            }
+            .disclaimer
+            {
+                margin-top:300px;
+                position: absolute;   
+            }
+            .s1
+            {
+                font-size:15px;
+                margin-top:100px;
+                margin-left:20px;
+            }
+            .s2
+            {
+                font-size:15px;
+                margin-left:180px;
+                margin-top:-120px;
+            }
+            .s3
+            {
+                font-size:15px;
+                margin-top:-100px;
+                margin-left:330px;
+            }
+            }
+            @media (max-width:540px)
+            {
+            #block
+            {
+                display:none;
+            }
+            #block.show  
+            {
+                display:block;
+            }
+          
+            #block
+            {
+                position:absolute;
+                top:70px;
+                width:100%;
+                background:white;
+                z-index:1000;
+            }
+            #block li:hover
+            {
+                background-color:#ddd;
+            }
+            #block li
+            {
+                display:block;
+                margin:0;
+                padding:15px;
+                border-bottom:1px solid #ddd;
+                line-height:normal;
+            }
+            .three
+            {
+                left:20px;
+                top:18px;
+                display:block;
+                position:absolute;
+                font-size:25px;
+                cursor:pointer;
+            }
+            .search
+            {
+                margin-left:-400px;
+            }
+
+            .log
+            {
+                position: absolute;
+                left:-450px;
+                top:70px;
+            }
+
+            .sin
+            {
+                position: absolute;
+                left:-460px;
+                top:70px;
+            }
+            .car
+            {
+                margin-left:-800px;
+            }
+            .image
+            {
+                width:450px;
+            }
+            img
+            {
+                width:350px;
+            }
+
+            }
+            
+            @media(max-width:430px)  /*iphone 14 Pro Max*/
+            {
+                .three
+                {
+                    left:15px;
+                    top:18px;
+                    display:block;
+                    position:absolute;
+                    font-size:25px;
+                    cursor:pointer;
+                    
+                }
+                .search
+                {
+                    width:170px;
+                    margin-left:-420px;
+                }
+                input[type="search"]
+                {
+                    width:130px;
+                }
+                .log
+                {
+                    width:60px;
+                    position: absolute;
+                    left:-500px;
+                    top:70px; 
+                }
+                .sin
+                {
+                    width:60px;
+                    position: absolute;
+                    left:-520px;
+                    top:70px;
+                    
+                }
+                .car
+                {
+                    margin-left:-885px;
+                }
+                .image
+                {
+                    width:390px;
+                }
+                img
+                {
+                    width:320px;
+                }
+                .s1
+            {
+                font-size:15px;
+                margin-top:100px;
+                margin-left:20px;
+            }
+            .s2
+            {
+                font-size:15px;
+                margin-left:150px;
+                margin-top:-120px;
+            }
+            .s3
+            {
+                font-size:15px;
+                margin-top:-100px;
+                margin-left:270px;
+            }
+            }
+             @media(max-width:414px)  /*iphone XR*/
+            {
+                .three
+                {
+                    left:15px;
+                    top:18px;
+                    display:block;
+                    position:absolute;
+                    font-size:25px;
+                    cursor:pointer;
+                    
+                }
+                .search
+                {
+                    width:160px;
+                    margin-left:-410px;
+                }
+                input[type="search"]
+                {
+                    width:120px;
+                }
+                .log
+                {
+                    width:50px;
+                    position: absolute;
+                    left:-510px;
+                    top:70px; 
+                }
+                .sin
+                {
+                    width:50px;
+                    position: absolute;
+                    left:-540px;
+                    top:70px;
+                    
+                }
+                .car
+                {
+                    margin-left:-900px;
+                }
+                .image
+                {
+                    width:350px;
+                }
+                img
+                {
+                    width:320px;
+                }
+                .s1
+            {
+                font-size:15px;
+                margin-top:100px;
+                margin-left:20px;
+            }
+            .s2
+            {
+                font-size:15px;
+                margin-left:130px;
+                margin-top:-120px;
+            }
+            .s3
+            {
+                font-size:15px;
+                margin-top:-100px;
+                margin-left:240px;
+            }
+            }
+            @media(max-width:390px)  /*iphone 12 Pro*/
+            {
+                .three
+                {
+                    left:15px;
+                    top:18px;
+                    display:block;
+                    position:absolute;
+                    font-size:25px;
+                    cursor:pointer;
+                    
+                }
+                .search
+                {
+                    width:160px;
+                    margin-left:-420px;
+                }
+                input[type="search"]
+                {
+                    width:120px;
+                }
+                .log
+                {
+                    width:50px;
+                    position: absolute;
+                    left:-520px;
+                    top:70px; 
+                }
+                .sin
+                {
+                    width:50px;
+                    position: absolute;
+                    left:-550px;
+                    top:70px;
+                    
+                }
+                .car
+                {
+                    margin-left:-925px;
+                }
+                .image
+                {
+                    width:340px;
+                }
+                img
+                {
+                    width:320px;
+                }
+                .s1
+            {
+                font-size:15px;
+                margin-top:100px;
+                margin-left:20px;
+            }
+            .s2
+            {
+                font-size:15px;
+                margin-left:130px;
+                margin-top:-120px;
+            }
+            .s3
+            {
+                font-size:15px;
+                margin-top:-100px;
+                margin-left:240px;
+            }
+            }
+            @media (max-width:344px)  /*iphone SE */
+            {
+                .three
+                {
+                    left:10px;
+                    top:18px;
+                    display:block;
+                    position:absolute;
+                    font-size:25px;
+                    cursor:pointer;
+                    
+                }
+                .search
+                {
+                    width:150px;
+                    margin-left:-430px;
+                }
+                input[type="search"]
+                {
+                    width:110px;
+                }
+                .log
+                {
+                    width:50px;
+                    position: absolute;
+                    left:-540px;
+                    top:70px; 
+                }
+                .sin
+                {
+                    width:50px;
+                    position: absolute;
+                    left:-570px;
+                    top:70px;
+                    
+                }
+                .car
+                {
+                    margin-left:-950px;
+                }
+                .image
+                {
+                    width:310px;
+                }
+                img
+                {
+                    width:280px;
+                }
+                .s1
+            {
+                font-size:15px;
+                margin-top:110px;
+                margin-left:20px;
+            }
+            .s2
+            {
+                margin-left:115px;
+                margin-top:-110px;
+            }
+            .s22
+            {
+                font-size:15px;
+            }
+            .s3
+            {
+                margin-top:-100px;
+                margin-left:210px;
+            }
+            .s33
+            {
+                font-size:15px;
+            }
+
+            }
+            
+            .skeleton
+            {
+                display:grid;
+                grid-template-columns:repeat(3,1fr);
+                margin:20px;
+                gap:10px;  
+            }
+            .column
+            {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            }
+
+            .bar
+            {
+                width:100%;
+                height:100px;
+                top:80px;
+                position: absolute;
+                background-color:grey;
+            }
+            .sc
+            {
+                width:100%;
+                height:300px;
+                top:175px;
+                position:absolute;
+                z-index:10;
+            }    </style>
+</head>
+<body>
+    <a href="home.html"><p class="T2">THE CARTIFY</p>
+    <span class="L2">by LakeShore</span></a>
+    <a href="#"><i class="fa-solid fa-magnifying-glass search"></i><p class="f1">serach</p></a>
+    <nav>
+        <ol>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="dine.html">Cart</a></li>
+            <li><a href="Experience.html">Experiences</a></li>
+            <li><a href="Event.html">Contact</a></li>
+            <li><a href="Service.html">Services</a></li>
+        </ol>
+    </nav>
+    <div class="textborder"><span class="text">SEARCH</span></div>
+    <div class="textborder2">
+        <Form>
+        <div class="how"><i class="fa-solid fa-magnifying-glass how1"></i><div class="input"><input type="text" placeholder="How can we help you?"></div></div>
+        <div class="search1"><span class="text2">Search</span></div> 
+        </Form>
+    </div>
+<footer>
+        <div class="footer"><p class="name">THE CARTIFY</p>
+        <span class="creator">by Vipin</span>
+        <p class="open">Opening time: 11 AM - 90:30 PM <br><br>
+        Resturant timing: 11 AM - 11 PM<br><br>
+        Phone number: +9999999999</p>
+        <a href="https://www.instagram.com/capitalmallvasai/"><i class="fa-brands fa-instagram insta"></i><p class="capital">CARTIFY</p></a>
+        <a href="https://www.google.com/maps/dir/19.0775296,72.8629248/capital+mall+mumbai/@19.247441,72.6978681,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3be7a98fb478de03:0xfd5ff864e936c9b6!2m2!1d72.8218253!2d19.4071176?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D"><i class="fa-solid fa-location-dot location"></i><p class="gl">Getlocation</p></a>
+        <p class="disclaimer">We do not advertise job opening or business opportunities. Needless to state that we disclaim all liability for
+        any loss that may be suffered by you as a result thereof.<br><br>
+        © copyright 2025 LakeShore | Capital Mall. All rights reserved.
+        </p>
+        <span class="s1">Shop</span><br><br>
+        <span class="s1">Dine</span><br><br>
+        <span class="s1">Experiences</span><br><br>
+        <span class="s1">Services</span><br><br>
+        <div class="s2">
+            <span class="s22">About us</span><br><br>
+            <span  class="s22">Events</span><br><br>
+            <span class="s22">Floor Maps</span><br><br>
+            <span class="s22">Contact us</span>
+        </div>
+        <div class="s3">
+            <span class="s33">Privacy Policy</span><br><br>
+            <span class="s33">Terms & Conditions</span><br><br>
+            <span class="s33">Other Information</span><br><br>
+            <span class="s33">History</span>
+        </div>
+        </div>
+        </footer>  
+
+
+</body>
+</html>

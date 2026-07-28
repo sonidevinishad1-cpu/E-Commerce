@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Image 360 Rotate</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #0f172a;
+}
+
+/* ONLY IMAGE */
+img {
+  width: 340px;
+  border-radius: 16px;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.6);
+  cursor: grab;
+  user-select: none;
+  transform-style: preserve-3d;
+}
+</style>
+</head>
+
+<body>
+
+<img src="lap-removebg-preview.png" id="img" />
+
+<script>
+const img = document.getElementById("img");
+
+let dragging = false;
+let startX = 0;
+let rotation = 0;
+
+img.addEventListener("mousedown", (e) => {
+  dragging = true;
+  startX = e.clientX;
+  img.style.cursor = "grabbing";
+});
+
+document.addEventListener("mouseup", () => {
+  dragging = false;
+  img.style.cursor = "grab";
+});
+
+document.addEventListener("mousemove", (e) => {
+  if (!dragging) return;
+
+  const diff = e.clientX - startX;
+  rotation += diff * 0.5;
+
+  img.style.transform = `rotateY(${rotation}deg)`;
+
+  startX = e.clientX;
+});
+</script>
+
+</body>
+</html>

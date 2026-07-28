@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin:0px;
+        }
+        .bluebackground
+        {
+            width:100%;
+            height:40vh;
+            z-index:-1;
+            position: absolute;
+            background-color:blue;
+        }
+        .mainpage
+        {
+            margin:0 auto;
+            top:80px;
+            width:30%;
+            height:75vh;
+            z-index:1;
+            min-width:400px;
+            position: relative;
+            border-radius:5px;
+            border:1px solid white;
+            background-color:white;
+            box-shadow:2px 10px 15px black;
+        }
+        i
+        {
+            font-size:80px;
+            color:rgb(196, 187, 187);
+            position:absolute;
+            z-index:2;
+            left:50%;
+            top:20vh;
+            transform:translateX(-50%);
+        }
+        .forgetpassword
+        {
+            top: 145px;
+            left:115px;
+            color:black;
+            font-size:25px;
+            position: absolute;
+            font-weight:30px;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .email
+        {
+            color:black;
+            font-size:15px;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-top:185px;
+            position: absolute;
+            text-align:center;
+
+        }
+        .box
+        {
+            width:308px;
+            height:34px;
+            border:1px solid grey;
+            position: absolute;
+            top:250px;
+            left:50px;
+            border-radius:3px;
+        }
+        input[type="email"]
+        {
+            width:250px;
+            height:32px;
+            left:48px;
+            position: relative;
+            outline:none;
+            border:none;
+        }
+        .emailicon
+        {
+            color:black;
+            margin-left:-130px;
+            margin-top:-125px;
+            font-size:30px;
+        }
+        input[type="submit"]
+        {
+            font-size:16px;
+            color:white;
+            margin-top:340px;
+            margin-left:48px;
+            height:40px;
+            width:315px;
+            border-radius:3px;
+            border:1px solid rgb(28, 170, 28);
+            background-color:rgb(28, 170, 28);
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        a
+        {
+            font-size:14px;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-left:165px;
+            color:grey;
+            text-decoration:none;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="bluebackground"></div>
+    <i class="fa-solid fa-circle-exclamation exclamation"></i>
+    <div class="mainpage">
+    <form action="">
+    <span class="forgetpassword">Forgot Password</span>
+    <span class="email">Enter your email and we'll send you a link to reset your password</span>
+    <div class="box"><i class="fa-regular fa-envelope emailicon"></i><input type="email" placeholder="Enter your email" id="" required></div>
+    <input type="submit"><br><br>
+    <a href="login.html">Back to Login</a>
+
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>.marquee{
+    width:100%;
+    overflow:hidden;
+    background:white;
+}
+
+.slider{
+    display:flex;
+    width:max-content;
+}
+
+.slider img{
+    width:500px;
+    height:280px;
+    flex-shrink:0;
+    margin-right:20px;
+}</style>
+</head>
+<body>
+    <div class="marquee">
+    <div class="slider" id="slider">
+        <img src="flipkart_offer1.webp">
+        <img src="offer2.webp">
+        <img src="flipkart_offer2.jpg">
+    </div>
+</div>
+</body>
+</html>
+<script>
+    const slider = document.getElementById("slider");
+
+slider.innerHTML += slider.innerHTML;
+
+let x = 0;
+let speed = 1;
+let paused = false;
+
+slider.addEventListener("mouseenter",()=>{
+    paused = true;
+});
+
+slider.addEventListener("mouseleave",()=>{
+    paused = false;
+});
+
+function slide(){
+
+    if(!paused){
+
+        x -= speed;
+
+        if(Math.abs(x) >= slider.scrollWidth/2){
+            x = 0;
+        }
+
+        slider.style.transform = `translateX(${x}px)`;
+    }
+
+    requestAnimationFrame(slide);
+}
+
+slide();
+</script>
